@@ -1,0 +1,41 @@
+﻿region,event_type,price_usd,duration_hours,pricing_model,platform
+austin,community care,46,3,tiered,eventbrite
+austin,meditation,19,1,tiered,eventbrite
+austin,sound bath,45,1.25,fixed,eventbrite
+austin,journaling,31,2,fixed,eventbrite
+austin,yoga sculpt,44,1.5,fixed,eventbrite
+austin,healing circle,25,3,donation,facebook
+austin,mental health,39,2,tiered,eventbrite
+austin,mindfulness,22,2,fixed,eventbrite
+austin,breathwork,50,1.5,fixed,eventbrite
+austin,pilates,12,2,fixed,eventbrite
+chicago,community care,40,1.5,donation,eventbrite
+chicago,meditation,10,1,donation,eventbrite
+chicago,sound bath,40,1,fixed,eventbrite
+chicago,journaling,15,0.75,tiered,eventbrite
+chicago,yoga sculpt,35,1.5,tiered,eventbrite
+chicago,healing circle,24,1.25,fixed,eventbrite
+chicago,mental health,65,2,fixed,eventbrite
+chicago,mindfulness,32,2,tiered,eventbrite
+chicago,breathwork,23,2,fixed,eventbrite
+chicago,pilates,15,1.5,fixed,eventbrite
+new jersey,community care,7,7,fixed,eventbrite
+new jersey,meditation,37,3,tiered,eventbrite
+new jersey,sound bath,50,1,fixed,eventbrite
+new jersey,journaling,42,1.5,fixed,eventbrite
+new jersey,yoga sculpt,42,2.5,fixed,eventbrite
+new jersey,healing circle,42,1.5,fixed,eventbrite
+new jersey,mental health,55,8,fixed,eventbrite
+new jersey,mindfulness,45,2,fixed,eventbrite
+new jersey,breathwork,47,1,fixed,eventbrite
+new jersey,pilates,55,1,fixed,eventbrite
+salt lake city,community care,10,3,donation,eventbrite
+salt lake city,meditation,34,6,tiered,twoarrowszen
+salt lake city,sound bath,33,1,fixed,facebook
+salt lake city,journaling,15,2,fixed,bemojournal
+salt lake city,yoga sculpt,30,1,fixed,eventbrite
+salt lake city,healing circle,23,2,donation,eventbrite
+salt lake city,mental health,59,2,fixed,eventbrite
+salt lake city,mindfulness,8,2,donation,eventbrite
+salt lake city,breathwork,30,1.5,fixed,eventbrite
+salt lake city,pilates,35,1.5,fixed,SLC Padel Club
