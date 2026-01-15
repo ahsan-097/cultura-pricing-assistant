@@ -4,7 +4,6 @@
 # In[ ]:
 
 
-pip install streamlit
 
 
 # In[1]:
@@ -74,7 +73,6 @@ if st.button("Get Pricing Recommendation"):
 # In[3]:
 
 
-pip install reportlab
 
 
 # In[4]:
