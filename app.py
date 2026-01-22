@@ -21,9 +21,10 @@ st.subheader("Event Details")
 
 event_type = st.selectbox(
     "Event Type",
-    ["pilates", "sound bath", "journaling", "healing circle", "perreo sculpt"]
+    ["pilates", "sound bath", "journaling", 
+     "healing circle", "meditation", "mindfulness", 
+     "yoga sculpt", "community care", "breathwork", "mental health"]
 )
-
 region = st.selectbox(
     "Region",
     ["chicago", "austin", "new jersey", "salt lake city"]
