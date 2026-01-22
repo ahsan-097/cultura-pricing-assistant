@@ -13,6 +13,9 @@ import streamlit as st
 import joblib
 import pandas as pd
 
+if "price" not in st.session_state:
+    st.session_state.price = None
+
 model = joblib.load("model.pkl")
 
 st.title("🌺 Cultura Pricing Assistant")
@@ -52,7 +55,8 @@ if st.button("Get Pricing Recommendation"):
         "trend_strength": trend_strength
     }])
 
-    price = model.predict(X)[0]
+    st.session_state.price = model.predict(X)[0]
+    price = st.session_state.price
 
     st.success(f"💵 Suggested Ticket Price: ${price:.2f}")
 
@@ -95,10 +99,14 @@ def generate_pdf(price):
 # In[5]:
 
 
-if st.button("Download PDF"):
-    generate_pdf(price)
-    st.download_button("Download Report", open("pricing_report.pdf", "rb"))
-
+if st.session_state.price is not None:
+    if st.button("Download PDF"):
+        generate_pdf(st.session_state.price)
+        st.download_button(
+            "Download Report",
+            open("pricing_report.pdf", "rb"),
+            file_name="pricing_report.pdf"
+        )
 
 # In[ ]:
 
