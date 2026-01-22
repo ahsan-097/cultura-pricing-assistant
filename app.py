@@ -30,7 +30,7 @@ region = st.selectbox(
     ["chicago", "austin", "new jersey", "salt lake city"]
 )
 
-duration_hours = st.slider("Duration (hours)", 0.5, 4.0, 1.0, 0.25)
+duration_hours = st.slider("Duration (hours)", 0.75, 8.0, 2.0, 0.25)
 event_intensity = st.slider("Event Intensity", 1, 3, 2)
 community_accessibility = st.slider("Community Accessibility", 1, 3, 2)
 trend_strength = st.slider("Trend Strength", 0, 100, 50)
