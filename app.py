@@ -86,7 +86,8 @@ if st.button("Get Pricing Recommendation"):
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
-def generate_pdf(price):
+def generate_pdf(price, duration_hours, event_intensity,community_accessibility, trend_strength, region):
+                     
     doc = SimpleDocTemplate("pricing_report.pdf")
     styles = getSampleStyleSheet()
     content = [
