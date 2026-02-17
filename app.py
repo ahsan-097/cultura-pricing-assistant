@@ -90,6 +90,8 @@ def generate_pdf(price, duration_hours, event_intensity,community_accessibility,
                      
     doc = SimpleDocTemplate("pricing_report.pdf")
     styles = getSampleStyleSheet()
+    low = round(price * 0.75)
+    high = round(price * 1.25)
     content = [
         Paragraph(f"Suggested Price: ${price:.2f}", styles["Heading2"]),
         Paragraph("Cultura Pricing Assistant Report", styles["Heading1"]),
