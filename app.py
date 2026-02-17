@@ -18,7 +18,7 @@ if "price" not in st.session_state:
 
 model = joblib.load("model.pkl")
 
-st.title("🌺 Cultura Pricing Assistant")
+st.title("CULTURA PRICING ASSISTANT")
 
 st.subheader("Event Details")
 
@@ -91,7 +91,17 @@ def generate_pdf(price):
     styles = getSampleStyleSheet()
     content = [
         Paragraph(f"Suggested Price: ${price:.2f}", styles["Heading2"]),
-        Paragraph("This recommendation is based on regional demand and event characteristics.", styles["BodyText"])
+        Paragraph("Cultura Pricing Assistant Report", styles["Heading1"]),
+        Paragraph(f"Region: {region}", styles["BodyText"]),
+        Paragraph(f"Duration: {duration_hours} hours", styles["BodyText"]),
+        Paragraph(f"Event Intensity: {event_intensity}", styles["BodyText"]),
+        Paragraph(f"Community Accessibility: {community_accessibility}", styles["BodyText"]),
+        Paragraph(f"Trend Strength: {trend_strength}", styles["BodyText"]),
+        Paragraph(" ", styles["BodyText"]),
+        Paragraph(f"Suggested Price: ${price:.2f}", styles["Heading2"]),
+        Paragraph(f"Sliding Scale Range: ${low} – ${high}", styles["BodyText"]),
+        Paragraph("This recommendation is based on regional cost adjustments, demand signals, "
+            "and event characteristics.", styles["BodyText"])
     ]
     doc.build(content)
 
@@ -101,7 +111,13 @@ def generate_pdf(price):
 
 if st.session_state.price is not None:
     if st.button("Download PDF"):
-        generate_pdf(st.session_state.price)
+        generate_pdf(st.session_state.price,
+                     duration_hours, 
+                     event_intensity,
+                     community_accessibility,
+                     trend_strength,
+                     region)
+        
         st.download_button(
             "Download Report",
             open("pricing_report.pdf", "rb"),
